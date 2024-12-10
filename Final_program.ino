@@ -70,9 +70,9 @@ int TS6 = 0;
 void setup() {
 
   // Pinmodes for LEDs
-  pinMode(32, OUTPUT);
-  pinMode(33, OUTPUT);
-  pinMode(25, OUTPUT);
+  pinMode(26, OUTPUT);
+  pinMode(27, OUTPUT);
+  pinMode(14, OUTPUT);
 
 
 
@@ -94,16 +94,16 @@ void setup() {
   lcd.print("--------------------");
 
   // LED Test On
-  digitalWrite(32, HIGH);
-  digitalWrite(25, HIGH);
-  digitalWrite(33, HIGH);
+  digitalWrite(26, HIGH);
+  digitalWrite(14, HIGH);
+  digitalWrite(27, HIGH);
 
   delay(2000);
 
   // LED Test Off
-  digitalWrite(32, LOW);
-  digitalWrite(25, LOW);
-  digitalWrite(33, LOW);
+  digitalWrite(26, LOW);
+  digitalWrite(14, LOW);
+  digitalWrite(27, LOW);
 
   // LED Test sequence Program
   StartL();
@@ -143,21 +143,21 @@ void LightPro()
   // LED Program when Battery is full
   // Green LED is ON
   if (Batfull) {
-    digitalWrite(32, LOW);
-    digitalWrite(33, HIGH);
-    digitalWrite(25, LOW);
+    digitalWrite(26, LOW);
+    digitalWrite(27, HIGH);
+    digitalWrite(14, LOW);
   }
   // LED Program when Battery is Charging
   // Blue LED is Flashing
   else if (Batcharge) {
-    digitalWrite(33, LOW);
-    digitalWrite(25, LOW);
+    digitalWrite(27, LOW);
+    digitalWrite(14, LOW);
     if (Timer1 == 0) {
-      digitalWrite(32, HIGH);
+      digitalWrite(26, HIGH);
       TS1 = 1;
     }
     else if (Timer1 == 10) {
-      digitalWrite(32, LOW);
+      digitalWrite(26, LOW);
       TS1 = 0;
     }
     if (TS1 == 1) {
@@ -170,14 +170,14 @@ void LightPro()
   // LED Program if no battery or wrong battery charge
   // Red LED is Flashing
   else if (Baterror) {
-    digitalWrite(32, LOW);
-    digitalWrite(33, LOW);
+    digitalWrite(26, LOW);
+    digitalWrite(27, LOW);
     if (Timer2 == 0) {
-      digitalWrite(25, HIGH);
+      digitalWrite(14, HIGH);
       TS2 = 1;
     }
     else if (Timer2 == 5) {
-      digitalWrite(25, LOW);
+      digitalWrite(14, LOW);
       TS2 = 0;
     }
     if (TS2 == 1) {
@@ -409,40 +409,40 @@ void StartL()
 {
   // Lighting program sequence to test LED's
   delay(100);
-  digitalWrite(25, HIGH);
-  digitalWrite(33, LOW);
-  digitalWrite(32, LOW);
+  digitalWrite(14, HIGH);
+  digitalWrite(27, LOW);
+  digitalWrite(26, LOW);
   delay(100);
-  digitalWrite(25, LOW);
-  digitalWrite(33, HIGH);
-  digitalWrite(32, LOW);
+  digitalWrite(14, LOW);
+  digitalWrite(27, HIGH);
+  digitalWrite(26, LOW);
   delay(100);
-  digitalWrite(25, LOW);
-  digitalWrite(33, LOW);
-  digitalWrite(32, HIGH);
+  digitalWrite(14, LOW);
+  digitalWrite(27, LOW);
+  digitalWrite(26, HIGH);
   delay(100);
-  digitalWrite(25, HIGH);
-  digitalWrite(33, LOW);
-  digitalWrite(32, LOW);
+  digitalWrite(14, HIGH);
+  digitalWrite(27, LOW);
+  digitalWrite(26, LOW);
   delay(100);
-  digitalWrite(25, LOW);
-  digitalWrite(33, HIGH);
-  digitalWrite(32, LOW);
+  digitalWrite(14, LOW);
+  digitalWrite(27, HIGH);
+  digitalWrite(26, LOW);
   delay(100);
-  digitalWrite(25, LOW);
-  digitalWrite(33, LOW);
-  digitalWrite(32, HIGH);
+  digitalWrite(14, LOW);
+  digitalWrite(27, LOW);
+  digitalWrite(26, HIGH);
   delay(100);
-  digitalWrite(25, LOW);
-  digitalWrite(33, LOW);
-  digitalWrite(32, LOW);
+  digitalWrite(14, LOW);
+  digitalWrite(27, LOW);
+  digitalWrite(26, LOW);
   delay(100);
-  digitalWrite(25, HIGH);
-  digitalWrite(33, HIGH);
-  digitalWrite(32, HIGH);
+  digitalWrite(14, HIGH);
+  digitalWrite(27, HIGH);
+  digitalWrite(26, HIGH);
   delay(600);
-  digitalWrite(25, LOW);
-  digitalWrite(33, LOW);
-  digitalWrite(32, LOW);
+  digitalWrite(14, LOW);
+  digitalWrite(27, LOW);
+  digitalWrite(26, LOW);
   delay(100);
 }

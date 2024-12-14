@@ -17,9 +17,11 @@ download works)
 This program was programed on the Arduino Legacy IDE.
 
 We have 3 files in this project file
--Final_program
--Test_Code_for_Current_Sensor
--Demo_Code_For_Symposium
+
+Final_program
+Test_Code_for_Current_Sensor
+Demo_Code_For_Symposium
+
 The Final_program is the program that you should use for the normal operations of the module.
 The Test_Code_for_Current_Sensor is the code you should before the Final_program to get the current sensor zero voltage.
 (BE AWARE that in Test_Code_for_Current_Sensor The Duty Cycle of the PWM is set to a non zero amount so if you don't want output then set Duty Cycle to 0)

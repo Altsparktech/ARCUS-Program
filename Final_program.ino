@@ -193,6 +193,7 @@ void Votagemeasure()
 {
   // Voltage reading from Pin 4
   // Always measuring
+  // Might need changing
   Voltage = analogRead(4);
   Voltage = (Voltage * 3.3) / 4095.0;
   Voltage = Voltage * 141.342 ;
@@ -235,6 +236,7 @@ void Currentmeasure()
   Current = (Current * 3.3) / 4095.0;
   Current = Current * (10000.0 + 63500.0) / 63500.0;
   CVolt = Current; // CVolt show what the Voltage is at current reader
+  // Before using this code use the test code to set the zero value for the current sensor
   Current = (Current - (1.91)) / 0.044;
 }
 //--------------------------------------AmpDis----------------------------------------------//

@@ -25,11 +25,8 @@ Test_Code_for_Current_Sensor
 Demo_Code_For_Symposium
 
 The Final_program is the program that you should use for the normal operations of the module.
-
 The Test_Code_for_Current_Sensor is the code you should before the Final_program to get the current sensor zero voltage.
-
 (BE AWARE that in Test_Code_for_Current_Sensor The Duty Cycle of the PWM is set to a non zero amount so if you don't want output then set Duty Cycle to 0)
-
 The Demo_Code_For_Symposium is the program we use for the Symposium so it have some extra programs the Final_program does not to Account for the smaller screen.
 
 By Kongphop Amphandang

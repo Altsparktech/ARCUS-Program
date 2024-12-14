@@ -26,7 +26,8 @@ LiquidCrystal_I2C lcd(0x27, 20, 4);
 // Setting PWM properties
 const int freq = 30000;       // PWM Frequency setting
 const int resolution = 8;     // PWM Resolution setting
-int dutyCycle = 128;            //0-255 = 0-100% DutyCycle
+// 255 / 0.5 = 127.5 = 50% PWM
+int dutyCycle = 128;            //0-255 = 0-100% DutyCycle WARNING PWM is set to 50%
 float Voltage = 0;
 float Current = 0;
 
